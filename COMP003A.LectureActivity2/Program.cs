@@ -32,6 +32,16 @@ namespace COMP003A.LectureActivity2
             Console.Write("Are you a student? (true/false): ");
             isStudent = bool.Parse(Console.ReadLine()); // Convert and assign the user's input to isStudent
 
+            // Step 3.2: perform calculations
+            int futureAge = userAge + 5; // calculate the user's age in 5 years
+            bool isAdult = userAge >= 18; // determine if the user is 18 or older
+            bool isAdultStudent = isStudent && isAdult; // Determine if the user is both a student and an adult
+
+            // Step 3.3: Display outputs using string interpolation
+            Console.WriteLine($"\nHello, {userName}!"); //Greet the user with their name
+            Console.WriteLine($"You are currently {userAge} years old. In 5 years, you will be {futureAge}."); // Display current and future age
+            Console.WriteLine($"Are you 18 or older? {isAdult}"); // Display if the user is 18 or older
+            Console.WriteLine($"Are you both a student and 18 or older? {isAdultStudent}"); // Display if the user is both a student and an adult
         }
     }
 }
